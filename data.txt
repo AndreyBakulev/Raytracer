@@ -1,0 +1,9 @@
+render took 31.457 seconds on a 400 by 200 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects
+render took 248.096 seconds on a 960 by 540 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects
+render took 51.078 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 9 objects
+render took 15.084 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects
+render took 15.116 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects
+render took 59.558 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects
+render took 52.806 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 3 ambient bounces, 200 ambient power and 8 objects
+render took 58.793 seconds on a 480 by 270 image using 64 antialiasing, 2 reflection bounces, 5 ambient bounces, 2 ambient power and 8 objects
+render took 82.658 seconds on a 480 by 270 image using 100 antialiasing, 2 reflection bounces, 3 ambient bounces, 2 ambient power and 8 objects

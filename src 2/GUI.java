@@ -19,8 +19,10 @@ public class GUI extends JFrame {
         int xResolution = Controller.X_RESOLUTION;
         int yResolution = Controller.Y_RESOLUTION;
         // the time in unix epochs when the program begins running
+        int numThreads = Runtime.getRuntime().availableProcessors();
         long startTime = System.currentTimeMillis();
         // which scene to render.
+        System.out.println("\n\nUsing "+ numThreads + " threads");
         System.out.println("Creating scene... in GUI");
         // Scene s = SceneCreator.scene1(xResolution, yResolution);
         // Render the scene into a ColorImage
@@ -34,7 +36,6 @@ public class GUI extends JFrame {
         // making the colorimage
         ColorImage image2 = new ColorImage(xResolution, yResolution);
         // amount of available processors on the given computer
-        int numThreads = Runtime.getRuntime().availableProcessors();
         ExecutorService executor = Executors.newFixedThreadPool(numThreads);
         // splits the image into evenly distributed sections based on the amt of threads
         int chunkSizeX = xResolution / numThreads;
@@ -56,7 +57,7 @@ public class GUI extends JFrame {
         executor.shutdown();
         try {
             // max time the threads can take until it auto-quits
-            executor.awaitTermination(10, TimeUnit.HOURS);
+            executor.awaitTermination(Controller.TIMEOUT, TimeUnit.SECONDS);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -89,7 +90,7 @@ public class GUI extends JFrame {
         //frame.getContentPane().add(new JLabel(new ImageIcon(bufferedImage)));
         frame.pack();
         frame.setVisible(true);
-        // System.exit(1);
+        System.exit(1);
     }
 
     public static void main(String[] args) throws Exception{

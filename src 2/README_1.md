@@ -10,3 +10,10 @@ soft mirrors
 beanContextChildSupport (best import)
 GUI (BTW THE ACTUAL CODE FOR PRINTING THE IMAGE TO GUI IS COMMENTED OUT SO IT WILL OPEN BUT WITH NO IMAGE)
 base req's
+
+
+TO RUN:
+main class in GUI.java,
+javac GUI.java
+java GUI
+wait!

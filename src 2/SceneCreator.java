@@ -17,7 +17,7 @@ public class SceneCreator {
         Camera cam = new Camera(new Point(Controller.CAMERA_X, Controller.CAMERA_Y, Controller.CAMERA_Z), // camera location
                 new Vector(0, 0, -1), // forward vector/view direction
                 new Vector(0, 1, 0), // up vector
-                20, // field of view
+                25, // field of view
                 xResolution / yResolution); // aspect ratio
         Scene s = new Scene(cam);
         //all the colors I used
@@ -27,7 +27,7 @@ public class SceneCreator {
         Lambert red = new Lambert(Color.Red());
         Lambert black = new Lambert(Color.Black());
         Phong pRed = new Phong(Color.Red(), Color.White(), 20);
-        Phong pGray = new Phong(new Color(.5, .5, .5), Color.White(), 20);
+        Phong pGray = new Phong(new Color(.4, .4, .4), Color.White(), 20);
         Phong pGreen = new Phong(Color.Green(), Color.White(), 20);
         Phong pCyan = new Phong(Color.Cyan(), Color.White(), 20);
         Phong pMagenta = new Phong(Color.Magenta(), Color.White(), 20);
@@ -39,15 +39,15 @@ public class SceneCreator {
         MirrorPhong mRed = new MirrorPhong(Color.Red(), Color.White(), 20, .25,.01);
         MirrorPhong mirror = new MirrorPhong(Color.Dark(), Color.White(), 20, 1,.001);
         MirrorPhong halfMirror = new MirrorPhong(Color.Dark(), Color.White(), 20, .7,.05);
-        Texture checkers = new Texture("checkers.jpeg");
-        Texture earth = new Texture("earth.jpg");
+        //Texture checkers = new Texture("checkers.jpeg");
+        //Texture earth = new Texture("earth.jpg");
 
         //making all the objects
-        Surface s1 = new Sphere(new Point(0, 0, -25), 4, white, new Vector(0, 0,-1), new Vector(0, 1, 0));
+        Surface s1 = new Sphere(new Point(0, 0, -25), 3, white, new Vector(0, 0,-1), new Vector(0, 1, 0));
         s.addSurface(s1);
-        Surface s3 = new Sphere(new Point(4, -1.5, -30), 1.5, checkers,new Vector(0, 0,1), new Vector(0, 1, 0));
+        //Surface s3 = new Sphere(new Point(4, -1.5, -30), 1.5, checkers,new Vector(0, 0,1), new Vector(0, 1, 0));
         //s.addSurface(s3);
-        Surface s7 = new Sphere(new Point(-2,-1.5,-15), 1.5, earth, new Vector(0, 0, 1), new Vector(0, 1,0));
+        //Surface s7 = new Sphere(new Point(-2,-1.5,-15), 1.5, earth, new Vector(0, 0, 1), new Vector(0, 1,0));
         //s.addSurface(s7);
         Surface s8 = new Cone(new Point(2, 0, -10), new Point(2, 5, -10), 2, pCyan);
         //s.addSurface(s8);
